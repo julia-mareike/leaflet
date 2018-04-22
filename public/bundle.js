@@ -21228,9 +21228,8 @@ var App = function App() {
     _react2.default.createElement(
       'p',
       null,
-      'Hiya, good luck!'
-    ),
-    _react2.default.createElement('iframe', { src: 'https://giphy.com/embed/yoJC2AkZpy7PffDToY', width: '480', height: '359', frameBorder: '0', className: 'giphy-embed', allowFullScreen: true })
+      'Map'
+    )
   );
 };
 

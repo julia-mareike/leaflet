@@ -1,7 +1,7 @@
 {
-  "name": "react-redux-boilerplate",
+  "name": "leaflet",
   "version": "0.1.0",
-  "description": "React Redux using express",
+  "description": "playing around with leaflet",
   "main": "server/index.js",
   "scripts": {
     "start": "webpack && node server",
@@ -29,7 +29,6 @@
     "webpack-dev-server": "^2.11.1"
   },
   "dependencies": {
-    "body-parser": "^1.18.2",
     "express": "^4.16.2"
   }
 }
