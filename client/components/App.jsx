@@ -1,8 +1,9 @@
 import React from 'react'
+import Auckland from './Auckland'
 
 const App = () => (
   <div className='app-container'>
-    <p>Map</p>
+    <Auckland />
   </div>
 )
 
