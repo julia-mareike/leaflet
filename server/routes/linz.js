@@ -9,8 +9,8 @@ router.get('/', (req, res) => {
     .then(response => {
       res.send(response.body.items[0].__geometry__.coordinates)
     })
-    .catch((err) => {
-      res.status(500).send(err.message)
+    .catch(() => {
+      res.sendStatus(500)
     })
 })
 

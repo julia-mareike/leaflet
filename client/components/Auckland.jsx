@@ -25,7 +25,6 @@ class Auckland extends React.Component {
   }
 
   render () {
-    // const ruru = getRuru
     const position = [-36.8670921833, 174.7585096333]
     const zoom = 15
     const url = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}'

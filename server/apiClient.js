@@ -10,9 +10,9 @@ module.exports = {
 
 function getRuru () {
   return request.get(ruruUrl)
-    // .send(`key=${linzKey}`, 'query={"road_id":1831547}', 'include_geom=true')
-    // .send({include_geom: 'true'})
-    // .then(res => {
-    //   console.log('done')
-    // })
+  // .send(`key=${linzKey}`, 'query={"road_id":1831547}', 'include_geom=true')
+  // .send({include_geom: 'true'})
+  // .then(res => {
+  //   console.log('done')
+  // })
 }
