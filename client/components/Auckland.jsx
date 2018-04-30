@@ -1,12 +1,31 @@
 import React from 'react'
 import {LayersControl, Map, Polyline, TileLayer} from 'react-leaflet'
 
+import {getRuru} from '../apiClient.js'
+
 import {ruru, rākau} from '../streets'
 
 const {BaseLayer, Overlay} = LayersControl
 
 class Auckland extends React.Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+
+    }
+  }
+
+  componentWillMount () {
+    getRuru()
+      .then(res => {
+        this.setState({
+          ruru: res.text
+        })
+      })
+  }
+
   render () {
+    // const ruru = getRuru
     const position = [-36.8670921833, 174.7585096333]
     const zoom = 15
     const url = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}'
