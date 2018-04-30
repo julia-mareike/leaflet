@@ -3,7 +3,7 @@ import {LayersControl, Map, Polyline, TileLayer} from 'react-leaflet'
 
 import {getRuru} from '../apiClient.js'
 
-import {ruru, rākau} from '../streets'
+import {rākau} from '../streets'
 
 const {BaseLayer, Overlay} = LayersControl
 
@@ -11,7 +11,7 @@ class Auckland extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-
+      ruru: 0
     }
   }
 
@@ -44,7 +44,7 @@ class Auckland extends React.Component {
             />
           </BaseLayer>
           <Overlay name='ruru'>
-            <Polyline color='blue' positions={ruru} />
+            <Polyline color='blue' positions={this.state.ruru} />
           </Overlay>
           <Overlay name='rākau'>
             <Polyline color='lime' positions={rākau} />
