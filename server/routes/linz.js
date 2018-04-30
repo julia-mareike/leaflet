@@ -7,7 +7,7 @@ const router = express.Router()
 router.get('/', (req, res) => {
   getRuru()
     .then(response => {
-      res.send(response.body.items)
+      res.send(response.body.items[0].__geometry__.coordinates)
     })
     .catch((err) => {
       res.status(500).send(err.message)
