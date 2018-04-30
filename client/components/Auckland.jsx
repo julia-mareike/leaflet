@@ -19,7 +19,7 @@ class Auckland extends React.Component {
     getRuru()
       .then(res => {
         this.setState({
-          ruru: res.text
+          ruru: res.body
         })
       })
   }
