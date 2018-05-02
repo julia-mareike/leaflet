@@ -1,7 +1,7 @@
 import React from 'react'
 import {LayersControl, Map, Polyline, TileLayer} from 'react-leaflet'
 
-import {getRuru} from '../apiClient.js'
+import {getCoords} from '../apiClient.js'
 
 import {rākau} from '../streets'
 
@@ -11,16 +11,17 @@ class Auckland extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      ruru: 0
+      coords: []
     }
   }
 
   componentWillMount () {
-    getRuru()
+    getCoords()
       .then(res => {
-        this.setState({
-          ruru: res.body
-        })
+        // this.setState({
+        //   coords: []
+        // })
+        console.log(res)
       })
   }
 
@@ -43,7 +44,7 @@ class Auckland extends React.Component {
             />
           </BaseLayer>
           <Overlay name='ruru'>
-            <Polyline color='blue' positions={this.state.ruru} />
+            <Polyline color='blue' positions={this.state.coords} />
           </Overlay>
           <Overlay name='rākau'>
             <Polyline color='lime' positions={rākau} />
