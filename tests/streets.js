@@ -210,3 +210,292 @@ const punga = [
 ]
 
 export const rākau = _.concat(nikau, korari, akiraho, kohekohe, karaka, tāwari, akepiro, horopito, punga)
+
+// layer=53382&x=174.7585488&y=-36.8673986&max_results=5&radius=1000&geometry=true
+export const vectorData = [
+  {
+    'geometry': {
+      'type': 'MultiLineString',
+      'coordinates': [
+        [
+          [
+            174.7585096333,
+            -36.8670921833
+          ],
+          [
+            174.75874785,
+            -36.8674314167
+          ],
+          [
+            174.7590423167,
+            -36.8674576167
+          ]
+        ],
+        [
+          [
+            174.75781668330004,
+            -36.866171316700004
+          ],
+          [
+            174.7579059333,
+            -36.866263
+          ],
+          [
+            174.7585096333,
+            -36.8670921833
+          ]
+        ]
+      ]
+    },
+    'distance': 14,
+    'type': 'Feature',
+    'properties': {
+      'road_id': 1831584,
+      'geometry_class': 'Addressing Road',
+      'road_type': 'Unknown',
+      'road_name_class': 'Road',
+      'full_road_name': 'Ruru Street',
+      'road_name_label': 'Ruru St',
+      'road_name_prefix': null,
+      'road_name_body': 'Ruru',
+      'road_name_type': 'Street',
+      'road_name_suffix': null,
+      'route_name_body': null,
+      'route_name_number': null,
+      'route_name_alpha': null,
+      'route_name_suffix': null,
+      'full_road_name_ascii': 'Ruru Street',
+      'road_name_label_ascii': 'Ruru St',
+      'road_name_body_ascii': 'Ruru'
+    },
+    'id': 91316
+  },
+  {
+    'geometry': {
+      'type': 'MultiLineString',
+      'coordinates': [
+        [
+          [
+            174.75924545,
+            -36.8667732333
+          ],
+          [
+            174.7585096333,
+            -36.8670921833
+          ]
+        ],
+        [
+          [
+            174.76113725,
+            -36.8656960333
+          ],
+          [
+            174.7607787568334,
+            -36.86593800472117
+          ]
+        ],
+        [
+          [
+            174.7599972667,
+            -36.86644745
+          ],
+          [
+            174.75924545,
+            -36.8667732333
+          ]
+        ],
+        [
+          [
+            174.7607787568334,
+            -36.86593800472117
+          ],
+          [
+            174.7600718167,
+            -36.8664151667
+          ],
+          [
+            174.7599972667,
+            -36.86644745
+          ]
+        ]
+      ]
+    },
+    'distance': 34,
+    'type': 'Feature',
+    'properties': {
+      'road_id': 1831547,
+      'geometry_class': 'Addressing Road',
+      'road_type': 'Unknown',
+      'road_name_class': 'Road',
+      'full_road_name': 'Nikau Street',
+      'road_name_label': 'Nikau St',
+      'road_name_prefix': null,
+      'road_name_body': 'Nikau',
+      'road_name_type': 'Street',
+      'road_name_suffix': null,
+      'route_name_body': null,
+      'route_name_number': null,
+      'route_name_alpha': null,
+      'route_name_suffix': null,
+      'full_road_name_ascii': 'Nikau Street',
+      'road_name_label_ascii': 'Nikau St',
+      'road_name_body_ascii': 'Nikau'
+    },
+    'id': 91287
+  },
+  {
+    'geometry': {
+      'type': 'MultiLineString',
+      'coordinates': [
+        [
+          [
+            174.7612340667,
+            -36.8666494167
+          ],
+          [
+            174.76042485,
+            -36.86702206670001
+          ]
+        ],
+        [
+          [
+            174.7593728333,
+            -36.8674875833
+          ],
+          [
+            174.7590423167,
+            -36.8674576167
+          ]
+        ],
+        [
+          [
+            174.76042485,
+            -36.86702206670001
+          ],
+          [
+            174.7593728333,
+            -36.8674875833
+          ]
+        ]
+      ]
+    },
+    'distance': 44,
+    'type': 'Feature',
+    'properties': {
+      'road_id': 1818969,
+      'geometry_class': 'Addressing Road',
+      'road_type': 'Unknown',
+      'road_name_class': 'Road',
+      'full_road_name': 'Shaddock Street',
+      'road_name_label': 'Shaddock St',
+      'road_name_prefix': null,
+      'road_name_body': 'Shaddock',
+      'road_name_type': 'Street',
+      'road_name_suffix': null,
+      'route_name_body': null,
+      'route_name_number': null,
+      'route_name_alpha': null,
+      'route_name_suffix': null,
+      'full_road_name_ascii': 'Shaddock Street',
+      'road_name_label_ascii': 'Shaddock St',
+      'road_name_body_ascii': 'Shaddock'
+    },
+    'id': 110520
+  },
+  {
+    'geometry': {
+      'type': 'MultiLineString',
+      'coordinates': [
+        [
+          [
+            174.7586905167,
+            -36.8659519833
+          ],
+          [
+            174.7587825,
+            -36.8661008
+          ],
+          [
+            174.75924545,
+            -36.8667732333
+          ]
+        ]
+      ]
+    },
+    'distance': 93,
+    'type': 'Feature',
+    'properties': {
+      'road_id': 1824488,
+      'geometry_class': 'Addressing Road',
+      'road_type': 'Unknown',
+      'road_name_class': 'Road',
+      'full_road_name': 'Korari Street',
+      'road_name_label': 'Korari St',
+      'road_name_prefix': null,
+      'road_name_body': 'Korari',
+      'road_name_type': 'Street',
+      'road_name_suffix': null,
+      'route_name_body': null,
+      'route_name_number': null,
+      'route_name_alpha': null,
+      'route_name_suffix': null,
+      'full_road_name_ascii': 'Korari Street',
+      'road_name_label_ascii': 'Korari St',
+      'road_name_body_ascii': 'Korari'
+    },
+    'id': 115264
+  },
+  {
+    'geometry': {
+      'type': 'MultiLineString',
+      'coordinates': [
+        [
+          [
+            174.7571173833,
+            -36.8672852833
+          ],
+          [
+            174.75742935,
+            -36.8677294
+          ]
+        ],
+        [
+          [
+            174.7568166667,
+            -36.8668776
+          ],
+          [
+            174.7568804833,
+            -36.8669480167
+          ],
+          [
+            174.7571173833,
+            -36.8672852833
+          ]
+        ]
+      ]
+    },
+    'distance': 106,
+    'type': 'Feature',
+    'properties': {
+      'road_id': 1823951,
+      'geometry_class': 'Addressing Road',
+      'road_type': 'Unknown',
+      'road_name_class': 'Road',
+      'full_road_name': 'Ngahura Street',
+      'road_name_label': 'Ngahura St',
+      'road_name_prefix': null,
+      'road_name_body': 'Ngahura',
+      'road_name_type': 'Street',
+      'road_name_suffix': null,
+      'route_name_body': null,
+      'route_name_number': null,
+      'route_name_alpha': null,
+      'route_name_suffix': null,
+      'full_road_name_ascii': 'Ngahura Street',
+      'road_name_label_ascii': 'Ngahura St',
+      'road_name_body_ascii': 'Ngahura'
+    },
+    'id': 114794
+  }
+]
