@@ -1,18 +1,19 @@
 const request = require('superagent')
 
 const key = 'ecddf4ae567846ed8236d226dd412cea'
-const ruruUrl = `https://data.linz.govt.nz/services/query/v1/feature.dojodata/53382/?v=1.3&key=${key}&query={"road_id":1831584}&include_geom="true"`
-// const linzUrl = 'https://data.linz.govt.nz/services/query/v1/feature.dojodata/53382/?v=1.3'
+const radiusUrl = 'https://data.linz.govt.nz/services/query/v1/vector.json'
 
-module.exports = {
-  getRuru
+function getCoords () {
+  return request.get(radiusUrl)
+    .query({key: key})
+    .query({layer: 53382})
+    .query({x: 174.7585488})
+    .query({y: -36.8673986})
+    .query({max_results: 100})
+    .query({radius: 1000})
+    .query({geometry: true})
 }
 
-function getRuru () {
-  return request.get(ruruUrl)
-  // .send(`key=${linzKey}`, 'query={"road_id":1831547}', 'include_geom=true')
-  // .send({include_geom: 'true'})
-  // .then(res => {
-  //   console.log('done')
-  // })
+module.exports = {
+  getCoords
 }
