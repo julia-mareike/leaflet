@@ -9,7 +9,7 @@ export function getCoords () {
 export function reverseCoords (array) {
   for (let i = 0; i < array.length; i++) {
     for (let j = 0; j <= array.length; j++) {
-      array[i][j].sort()
+      if (array[i][j]) array[i][j].sort()
     }
   }
   return array
