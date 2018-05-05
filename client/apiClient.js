@@ -7,10 +7,10 @@ export function getCoords () {
 }
 
 export function reverseCoords (array) {
-  for (let i = 0; i < array.length; i++) {
-    for (let j = 0; j <= array.length; j++) {
-      if (array[i][j]) array[i][j].sort()
-    }
+  for (let element of array) {
+    Array.isArray(element[0])
+      ? reverseCoords(element)
+      : element.sort()
   }
   return array
 }
