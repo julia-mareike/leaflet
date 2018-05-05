@@ -10,8 +10,8 @@ router.get('/', (req, res) => {
       // res.send(response.body.items[0].__geometry__.coordinates) // ruru
       res.send(response.body.vectorQuery.layers[53382].features[0].geometry.coordinates) // vector
     })
-    .catch((err) => {
-      res.status(500).send(err.message)
+    .catch(() => {
+      res.sendStatus(500)
     })
 })
 

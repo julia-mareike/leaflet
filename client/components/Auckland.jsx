@@ -18,10 +18,9 @@ class Auckland extends React.Component {
   componentWillMount () {
     getCoords()
       .then(res => {
-        // this.setState({
-        //   coords: []
-        // })
-        console.log(res)
+        this.setState({
+          coords: res.body
+        })
       })
   }
 

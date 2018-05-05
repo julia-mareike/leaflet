@@ -2,14 +2,8 @@ const request = require('superagent')
 
 const key = 'ecddf4ae567846ed8236d226dd412cea'
 // const ruru = '{"road_id":1831584}'
-// const ruruUrl = `https://data.linz.govt.nz/services/query/v1/feature.dojodata/53382/?v=1.3&key=${key}&query={"road_id":1831584}&include_geom="true"`
 // const ruruUrl = 'https://data.linz.govt.nz/services/query/v1/feature.dojodata/53382/'
-// const radiusUrl = `https://data.linz.govt.nz/services/query/v1/vector.json?key=${key}&layer=53382&x=174.7585488&y=-36.8673986&max_results=30&radius=1000&geometry=true`
 const radiusUrl = 'https://data.linz.govt.nz/services/query/v1/vector.json'
-
-module.exports = {
-  getCoords
-}
 
 function getCoords () {
   return request.get(radiusUrl)
@@ -23,4 +17,8 @@ function getCoords () {
     // .query({v: 1.3}) // ruru
     // .query({query: ruru}) // ruru
     // .query({include_geom: true}) // ruru
+}
+
+module.exports = {
+  getCoords
 }
