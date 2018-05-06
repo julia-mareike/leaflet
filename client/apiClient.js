@@ -23,3 +23,11 @@ export const concatCoords = features => {
   })
   return coords
 }
+
+export const nameCoords = features => {
+  const streets = []
+  features.forEach(road => {
+    streets.push(road.properties.road_name_body)
+  })
+  return streets
+}

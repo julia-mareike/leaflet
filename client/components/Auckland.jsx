@@ -1,7 +1,7 @@
 import React from 'react'
 import {LayersControl, Map, Polyline, TileLayer} from 'react-leaflet'
 
-import {getCoords, reverseCoords, concatCoords} from '../apiClient.js'
+import {getCoords, reverseCoords, concatCoords, nameCoords} from '../apiClient.js'
 
 const {BaseLayer, Overlay} = LayersControl
 
@@ -9,7 +9,8 @@ class Auckland extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      coords: []
+      coords: [],
+      streets: []
     }
   }
 
@@ -17,7 +18,8 @@ class Auckland extends React.Component {
     getCoords()
       .then(res => {
         this.setState({
-          coords: (reverseCoords(concatCoords(res.body)))
+          coords: (reverseCoords(concatCoords(res.body))),
+          streets: nameCoords(res.body)
         })
       })
   }
