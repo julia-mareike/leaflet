@@ -1,7 +1,7 @@
 import request from 'superagent'
 import _ from 'lodash'
 
-import {teReo} from '../tests/streets'
+import {teReo} from '../tests/dbstreets'
 
 const linzUrl = '/api/v1/linz'
 
