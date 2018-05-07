@@ -21,11 +21,13 @@ export const reverseCoords = array => {
 
 export const concatCoords = features => {
   const coords = [[], []]
+  const names = nameCoords(features)
   features.forEach(road => {
     _.indexOf(teReo, road.properties.road_name_body) > -1
       ? coords[0].push(road.geometry.coordinates)
       : coords[1].push(road.geometry.coordinates)
   })
+  console.log(names)
   return coords
 }
 

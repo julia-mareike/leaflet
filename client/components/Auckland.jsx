@@ -13,8 +13,8 @@ class Auckland extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      // position: [-36.827587, 174.7902642],
-      position: [-36.8670921833, 174.7585096333],
+      position: [-36.827587, 174.7902642],
+      // position: [-36.8670921833, 174.7585096333],
       coords1: [],
       coords2: []
     }
