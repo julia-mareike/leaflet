@@ -3,23 +3,29 @@ import {LayersControl, Map, Polyline, TileLayer} from 'react-leaflet'
 
 import {getCoords, reverseCoords, concatCoords, nameCoords} from '../apiClient.js'
 
+import {teReo} from '../../tests/streets'
+
+import _ from 'lodash'
+
 const {BaseLayer, Overlay} = LayersControl
 
 class Auckland extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      coords: [],
-      streets: []
+      coords1: [],
+      coords2: []
     }
   }
 
   componentWillMount () {
     getCoords()
       .then(res => {
+        const coords = reverseCoords(concatCoords(res.body))
         this.setState({
-          coords: (reverseCoords(concatCoords(res.body))),
-          streets: nameCoords(res.body)
+          coords1: coords[0],
+          coords2: coords[1]
+          // streets: _.intersection((nameCoords(res.body)), teReo)
         })
       })
   }
@@ -42,12 +48,12 @@ class Auckland extends React.Component {
               accessToken={accessToken}
             />
           </BaseLayer>
-          <Overlay name='streets'>
-            <Polyline color='blue' positions={this.state.coords} />
+          <Overlay name='streets 1'>
+            <Polyline color='blue' positions={this.state.coords1} />
           </Overlay>
-          {/* <Overlay name='rākau'>
-            <Polyline color='lime' positions={rākau} />
-          </Overlay> */}
+          <Overlay name='streets 2'>
+            <Polyline color='lime' positions={this.state.coords2} />
+          </Overlay>
         </LayersControl>
       </Map>
     )
