@@ -3,18 +3,12 @@ import {LayersControl, Map, Polyline, TileLayer} from 'react-leaflet'
 
 import {getCoords, reverseCoords, concatCoords} from '../apiClient.js'
 
-// import {teReo} from '../../tests/streets'
-
-// import _ from 'lodash'
-
 const {BaseLayer, Overlay} = LayersControl
 
 class Auckland extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      // position: [-36.827587, 174.7902642],
-      // position: [-36.8670921833, 174.7585096333],
       position: {lat: -36.868840882080555, lng: 174.7713661193848},
       coords1: [],
       coords2: []
@@ -46,7 +40,7 @@ class Auckland extends React.Component {
   }
 
   render () {
-    const zoom = 15
+    const zoom = 14
     const url = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}'
     const attribution = 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>'
     const accessToken = 'pk.eyJ1IjoianVsaWEtbWFyZWlrZSIsImEiOiJjamdhY2VyNHoxMXFyMnlwam05dWphd3Y4In0.yAxAhojYaX8Q4Xcf-Qh2JQ'
