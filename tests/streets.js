@@ -1,5 +1,7 @@
 import _ from 'lodash'
 
+export const teReo = ['Ruru', 'Nikau', 'Korari', 'Ngahura', 'Akiraho', 'Kohekohe', 'Hohipere', 'Piwakawaka', 'Horopito', 'Punga', 'Karaka', 'Puka', 'Kawaka', 'Akepiro', 'Takau', 'Horoeka', 'Arawa', 'Tawari']
+
 export const ruru = [
   [
     [174.7585096333, -36.8670921833],
