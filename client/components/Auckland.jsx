@@ -9,7 +9,7 @@ class Auckland extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      position: {lat: -36.868840882080555, lng: 174.7713661193848},
+      position: {lat: -36.8673584, lng: 174.7562757},
       coords1: [],
       coords2: []
     }
@@ -50,17 +50,17 @@ class Auckland extends React.Component {
         <LayersControl position='topright'>
           <BaseLayer checked name='map'>
             <TileLayer
-              id={'mapbox.light'}
+              id={'mapbox.streets-basic'}
               url={url}
               attribution={attribution}
               accessToken={accessToken}
             />
           </BaseLayer>
           <Overlay checked name='Te reo street names'>
-            <Polyline color='red' positions={this.state.coords1} />
+            <Polyline color='red' opacity='0.5' positions={this.state.coords1} className='leaflet-zoom-hide' />
           </Overlay>
           <Overlay checked name='Other street names'>
-            <Polyline color='blue' positions={this.state.coords2} />
+            <Polyline color='blue' opacity = '0.5' positions={this.state.coords2} className='leaflet-zoom-hide' />
           </Overlay>
         </LayersControl>
       </Map>
