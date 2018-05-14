@@ -48,9 +48,17 @@ class Auckland extends React.Component {
     return (
       <Map center={this.state.position} zoom={zoom} onclick={this.getPosition}>
         <LayersControl position='topright'>
-          <BaseLayer checked name='map'>
+          <BaseLayer checked name='Street map'>
             <TileLayer
               id={'mapbox.streets-basic'}
+              url={url}
+              attribution={attribution}
+              accessToken={accessToken}
+            />
+          </BaseLayer>
+          <BaseLayer name='Suburb map'>
+            <TileLayer
+              id={'mapbox.pencil'}
               url={url}
               attribution={attribution}
               accessToken={accessToken}
