@@ -67,7 +67,7 @@ class Auckland extends React.Component {
             />
           </BaseLayer>
           <Overlay checked name='Red: te reo'>
-            <Polyline color='red' opacity='0.5' positions={this.state.coords1} className='leaflet-zoom-hide' />
+            <Polyline color='red' opacity='1' positions={this.state.coords1} className='leaflet-zoom-hide' />
           </Overlay>
           <Overlay checked name='Blue: other'>
             <Polyline color='blue' opacity = '0.5' positions={this.state.coords2} className='leaflet-zoom-hide' />
