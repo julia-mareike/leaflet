@@ -10,6 +10,7 @@ class Auckland extends React.Component {
     super(props)
     this.state = {
       position: {lat: -36.8673584, lng: 174.7562757},
+      zoom: 14,
       coords1: [],
       coords2: []
     }
@@ -34,19 +35,20 @@ class Auckland extends React.Component {
 
   getPosition (e) {
     this.setState({
-      position: e.latlng
+      position: e.latlng,
+      zoom: e.zoom
     })
     this.getPolylines()
   }
 
   render () {
-    const zoom = 14
+    // const zoom = 14
     const url = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}'
     const attribution = 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>'
     const accessToken = 'pk.eyJ1IjoianVsaWEtbWFyZWlrZSIsImEiOiJjamdhY2VyNHoxMXFyMnlwam05dWphd3Y4In0.yAxAhojYaX8Q4Xcf-Qh2JQ'
 
     return (
-      <Map center={this.state.position} zoom={zoom} onclick={this.getPosition}>
+      <Map center={this.state.position} zoom={this.state.zoom} onclick={this.getPosition}>
         <LayersControl position='topright'>
           <BaseLayer checked name='Street map'>
             <TileLayer
