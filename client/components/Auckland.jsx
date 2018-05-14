@@ -13,8 +13,6 @@ class Auckland extends React.Component {
     this.state = {
       position: {lat: -36.8673584, lng: 174.7562757},
       zoom: 14
-      // coords1: [],
-      // coords2: []
     }
     this.getPolylines = this.getPolylines.bind(this)
     this.getPosition = this.getPosition.bind(this)
@@ -28,11 +26,6 @@ class Auckland extends React.Component {
     getCoords(this.state.position)
       .then(res => {
         const coords = reverseCoords(concatCoords(res.body))
-        // console.log(coords)
-        // this.setState({
-        //   coords1: coords[0],
-        //   coords2: coords[1]
-        // })
         this.props.dispatch(addCoords(coords[0], coords[1]))
       })
   }
@@ -40,13 +33,12 @@ class Auckland extends React.Component {
   getPosition (e) {
     this.setState({
       position: e.latlng,
-      zoom: e.zoom
+      zoom: undefined
     })
     this.getPolylines()
   }
 
   render () {
-    // const zoom = 14
     const url = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}'
     const attribution = 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>'
     const accessToken = 'pk.eyJ1IjoianVsaWEtbWFyZWlrZSIsImEiOiJjamdhY2VyNHoxMXFyMnlwam05dWphd3Y4In0.yAxAhojYaX8Q4Xcf-Qh2JQ'
@@ -71,7 +63,7 @@ class Auckland extends React.Component {
             />
           </BaseLayer>
           <Overlay checked name='Red: te reo'>
-            <Polyline color='red' opacity='1' weight='2' positions={this.props.coords1} className='leaflet-zoom-hide' />
+            <Polyline color='red' opacity='0.5' weight='2' positions={this.props.coords1} className='leaflet-zoom-hide' />
           </Overlay>
           <Overlay checked name='Blue: other'>
             <Polyline color='blue' opacity = '0.5' weight='2' positions={this.props.coords2} className='leaflet-zoom-hide' />
