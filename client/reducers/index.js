@@ -1,7 +1,8 @@
 import {combineReducers} from 'redux'
 
-import things from './things'
+import {coords1, coords2} from './coords'
 
 export default combineReducers({
-  things
+  coords1,
+  coords2
 })

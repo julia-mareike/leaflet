@@ -1,7 +1,9 @@
 import React from 'react'
+import {connect} from 'react-redux'
 import {LayersControl, Map, Polyline, TileLayer} from 'react-leaflet'
 
 import {getCoords, reverseCoords, concatCoords} from '../apiClient.js'
+import {addCoords} from '../actions/index'
 
 const {BaseLayer, Overlay} = LayersControl
 
@@ -10,9 +12,9 @@ class Auckland extends React.Component {
     super(props)
     this.state = {
       position: {lat: -36.8673584, lng: 174.7562757},
-      zoom: 14,
-      coords1: [],
-      coords2: []
+      zoom: 14
+      // coords1: [],
+      // coords2: []
     }
     this.getPolylines = this.getPolylines.bind(this)
     this.getPosition = this.getPosition.bind(this)
@@ -26,10 +28,12 @@ class Auckland extends React.Component {
     getCoords(this.state.position)
       .then(res => {
         const coords = reverseCoords(concatCoords(res.body))
-        this.setState({
-          coords1: coords[0],
-          coords2: coords[1]
-        })
+        // console.log(coords)
+        // this.setState({
+        //   coords1: coords[0],
+        //   coords2: coords[1]
+        // })
+        this.props.dispatch(addCoords(coords[0], coords[1]))
       })
   }
 
@@ -67,10 +71,10 @@ class Auckland extends React.Component {
             />
           </BaseLayer>
           <Overlay checked name='Red: te reo'>
-            <Polyline color='red' opacity='1' positions={this.state.coords1} className='leaflet-zoom-hide' />
+            <Polyline color='red' opacity='1' weight='2' positions={this.props.coords1} className='leaflet-zoom-hide' />
           </Overlay>
           <Overlay checked name='Blue: other'>
-            <Polyline color='blue' opacity = '0.5' positions={this.state.coords2} className='leaflet-zoom-hide' />
+            <Polyline color='blue' opacity = '0.5' weight='2' positions={this.props.coords2} className='leaflet-zoom-hide' />
           </Overlay>
         </LayersControl>
       </Map>
@@ -78,4 +82,11 @@ class Auckland extends React.Component {
   }
 }
 
-export default Auckland
+function mapStateToProps (state) {
+  return {
+    coords1: state.coords1,
+    coords2: state.coords2
+  }
+}
+
+export default connect(mapStateToProps)(Auckland)
