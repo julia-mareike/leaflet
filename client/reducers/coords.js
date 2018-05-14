@@ -1,7 +1,7 @@
 export const coords1 = (state = [], action) => {
   switch (action.type) {
     case 'ADD_COORDS':
-      return action.coords1
+      return [...state, action.coords1]
       // [
       //   ...state,
       // {
@@ -18,7 +18,7 @@ export const coords1 = (state = [], action) => {
 export const coords2 = (state = [], action) => {
   switch (action.type) {
     case 'ADD_COORDS':
-      return action.coords2
+      return [...state, action.coords2]
       // [
       //   ...state,
       // {
