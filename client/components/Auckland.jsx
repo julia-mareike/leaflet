@@ -42,13 +42,12 @@ class Auckland extends React.Component {
     const url = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}'
     const attribution = 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>'
     const accessToken = 'pk.eyJ1IjoianVsaWEtbWFyZWlrZSIsImEiOiJjamdhY2VyNHoxMXFyMnlwam05dWphd3Y4In0.yAxAhojYaX8Q4Xcf-Qh2JQ'
-
     return (
       <Map center={this.state.position} zoom={this.state.zoom} onclick={this.getPosition}>
         <LayersControl position='topright'>
           <BaseLayer checked name='Street map'>
             <TileLayer
-              id={'mapbox.streets-basic'}
+              id='mapbox.streets-basic'
               url={url}
               attribution={attribution}
               accessToken={accessToken}
@@ -56,17 +55,17 @@ class Auckland extends React.Component {
           </BaseLayer>
           <BaseLayer name='Suburb map'>
             <TileLayer
-              id={'mapbox.pencil'}
+              id='mapbox.pencil'
               url={url}
               attribution={attribution}
               accessToken={accessToken}
             />
           </BaseLayer>
           <Overlay checked name='Red: te reo'>
-            <Polyline color='red' opacity='0.5' weight='2' positions={this.props.coords1} className='leaflet-zoom-hide' />
+            <Polyline color='red' opacity='0.5' weight='1.2' positions={this.props.coords1} className='leaflet-zoom-hide' />
           </Overlay>
           <Overlay checked name='Blue: other'>
-            <Polyline color='blue' opacity = '0.5' weight='2' positions={this.props.coords2} className='leaflet-zoom-hide' />
+            <Polyline color='blue' opacity = '0.5' weight='1.2' positions={this.props.coords2} className='leaflet-zoom-hide' />
           </Overlay>
         </LayersControl>
       </Map>
