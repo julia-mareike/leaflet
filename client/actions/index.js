@@ -1,6 +1,7 @@
-export const doAction = (thing) => {
+export const addCoords = (coords1, coords2) => {
   return {
-    type: 'ADD_THING',
-    thing: thing
+    type: 'ADD_COORDS',
+    coords1,
+    coords2
   }
 }
