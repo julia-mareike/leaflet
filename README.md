@@ -1,13 +1,15 @@
-# Leaflet
+# Leaflet street map of NZ
 
 ![Leaflet screenshot of Eden Terrace](/public/Leaflet-screenshot.png)
 
-This web app uses React and React-Leaflet to currently display a map of Auckland centered on Eden Terrace, with two overlays of polylines covering a small radius around the centre location. 
+This web app uses React and React-Leaflet to display a map of NZ - initially centered on Eden Terrace, Auckland - with two overlays displaying red and blue lines on the streets within a small radius. 
 
-The layer of red polylines displays roads with Māori names, and the layer of blue polylines displays all other roads. Clicking another location within NZ on the map will re-set the focal point and re-render the overlays.
+The layer of red polylines displays roads with Māori names, and the layer of blue polylines displays all other roads. Clicking another location will render more street lines around that point, with all data being saved to the Redux store enabling a larger view of street lines to be built up.
 
-All road name and node co-ordinates data is being called from data.linz.govt.nz, but please note the categorisation between the two layers is not 100% accurate at the moment (with a bit of guessing / arbitrary decisions made in some cases).
+![Leaflet screenshot of Auckland city](/public/Leaflet-auckland.png)
+
+All road name and node co-ordinate data is being called from data.linz.govt.nz. Please note the categorisation between te reo / other street names is likely not 100% accurate at the moment (with a bit of guessing / arbitrary decisions made in some cases).
 
 ### To run
 
-Clone down repo, run `yarn`, `yarn dev`, navigate to `http://localhost:3000`
+Clone down repo, run `yarn`, `yarn start`, navigate to `http://localhost:3000`
