@@ -7,7 +7,7 @@ import {addCoords} from '../actions/index'
 
 const {BaseLayer, Overlay} = LayersControl
 
-class Auckland extends React.Component {
+class LeafletMap extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -80,4 +80,4 @@ function mapStateToProps (state) {
   }
 }
 
-export default connect(mapStateToProps)(Auckland)
+export default connect(mapStateToProps)(LeafletMap)

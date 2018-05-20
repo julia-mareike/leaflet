@@ -1,9 +1,9 @@
 import React from 'react'
-import Auckland from './Auckland'
+import LeafletMap from './LeafletMap'
 
 const App = () => (
   <div className='app-container'>
-    <Auckland />
+    <LeafletMap />
   </div>
 )
 
