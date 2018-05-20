@@ -1,7 +1,7 @@
-export const addCoords = (coords1, coords2) => {
+export const addCoords = (huarahi, streets) => {
   return {
     type: 'ADD_COORDS',
-    coords1,
-    coords2
+    huarahi,
+    streets
   }
 }

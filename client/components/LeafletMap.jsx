@@ -62,10 +62,10 @@ class LeafletMap extends React.Component {
             />
           </BaseLayer>
           <Overlay checked name='Red: te reo'>
-            <Polyline color='red' opacity='0.5' weight='1.2' positions={this.props.coords1} className='leaflet-zoom-hide' />
+            <Polyline color='red' opacity='0.5' weight='1.2' positions={this.props.huarahi} className='leaflet-zoom-hide' />
           </Overlay>
           <Overlay checked name='Blue: other'>
-            <Polyline color='blue' opacity = '0.5' weight='1.2' positions={this.props.coords2} className='leaflet-zoom-hide' />
+            <Polyline color='blue' opacity = '0.5' weight='1.2' positions={this.props.streets} className='leaflet-zoom-hide' />
           </Overlay>
         </LayersControl>
       </Map>
@@ -75,8 +75,8 @@ class LeafletMap extends React.Component {
 
 function mapStateToProps (state) {
   return {
-    coords1: state.coords1,
-    coords2: state.coords2
+    huarahi: state.huarahi,
+    streets: state.streets
   }
 }
 

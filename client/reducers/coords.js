@@ -1,16 +1,16 @@
-export const coords1 = (state = [], action) => {
+export const huarahi = (state = [], action) => {
   switch (action.type) {
     case 'ADD_COORDS':
-      return [...state, action.coords1]
+      return [...state, action.huarahi]
     default:
       return state
   }
 }
 
-export const coords2 = (state = [], action) => {
+export const streets = (state = [], action) => {
   switch (action.type) {
     case 'ADD_COORDS':
-      return [...state, action.coords2]
+      return [...state, action.streets]
     default:
       return state
   }
