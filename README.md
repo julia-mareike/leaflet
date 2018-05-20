@@ -8,7 +8,7 @@ The layer of red polylines displays roads with Māori names, and the layer of bl
 
 ![Leaflet screenshot of Auckland city](/public/Leaflet-auckland.png)
 
-All road name and node co-ordinate data is being called from data.linz.govt.nz. Please note the categorisation between te reo / other street names is likely not 100% accurate at the moment (with a bit of guessing / arbitrary decisions made in some cases).
+All road name and node co-ordinate data is being called from https://data.linz.govt.nz/. Please note the categorisation between te reo / other street names is likely not 100% accurate at the moment (with a bit of guessing / arbitrary decisions made in some cases).
 
 ### To run
 
