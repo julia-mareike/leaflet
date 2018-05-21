@@ -13,3 +13,7 @@ All road name and node co-ordinate data is being called from https://data.linz.g
 ### To run
 
 Clone down repo, run `yarn`, `yarn start`, navigate to `http://localhost:3000`
+
+OR
+
+visit https://nga-huarahi.herokuapp.com/
